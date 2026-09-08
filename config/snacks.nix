@@ -194,5 +194,25 @@
       mode = [ "n" ];
       action = "<cmd>lua Snacks.picker.lsp_workspace_symbols()<CR>";
     }
+
+    # Search Keymaps (Command Palette for Shortcuts)
+    {
+      key = "<leader>sk";
+      mode = [ "n" ];
+      action = "<cmd>lua Snacks.picker.keymaps()<CR>";
+      options = {
+        desc = "Search Keymaps";
+      };
+    }
+
+    # Search Commands (Command Palette for Actions)
+    {
+      key = "<leader>sC";
+      mode = [ "n" ];
+      action = "<cmd>lua Snacks.picker.commands()<CR>";
+      options = {
+        desc = "Search Commands / Actions";
+      };
+    }
   ];
 }

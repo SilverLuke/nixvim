@@ -77,6 +77,8 @@
       golangci-lint # Go linter
       shellcheck # Shell script linter
       eslint_d # JavaScript/TypeScript linter
+      ruff # Python linter, formatter and LSP
+      basedpyright # Python type checking and LSP
       # Debuggers
       asm-lsp # Assembly LSP
       delve # Go debugger

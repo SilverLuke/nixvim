@@ -9,9 +9,6 @@
     lsp-lines = {
       enable = true;
     };
-    lsp-format = {
-      enable = true;
-    };
     helm = {
       enable = true;
     };
@@ -45,7 +42,32 @@
         marksman = {
           enable = true;
         };
-        pyright = {
+        basedpyright = {
+          enable = true;
+          extraOptions = {
+            settings = {
+              basedpyright = {
+                analysis = {
+                  typeCheckingMode = "standard";
+                  autoImportCompletions = true;
+                  diagnosticSeverityOverrides = {
+                    # Let Ruff handle unused imports, variables, and duplicate imports
+                    reportUnusedImport = "none";
+                    reportUnusedVariable = "none";
+                    reportDuplicateImport = "none";
+                  };
+                  inlayHints = {
+                    variableTypes = true;
+                    callArgumentNames = true;
+                    functionReturnTypes = true;
+                    genericTypes = true;
+                  };
+                };
+              };
+            };
+          };
+        };
+        ruff = {
           enable = true;
         };
         gopls = {
@@ -92,6 +114,9 @@
             };
           };
         };
+        clangd = {
+          enable = true;
+        };
       };
 
       keymaps = {
@@ -129,7 +154,16 @@
         #     action = "rename";
         #     desc = "Rename";
         #   };
-        # };
+        lspBuf = {
+          "<leader>ca" = {
+            action = "code_action";
+            desc = "LSP Code Action";
+          };
+          "<leader>cr" = {
+            action = "rename";
+            desc = "LSP Rename";
+          };
+        };
         diagnostic = {
           "<leader>cd" = {
             action = "open_float";
