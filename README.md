@@ -17,7 +17,7 @@ You can choose one of the following two methods to run this config:
 ### 🔁 Method 1: Clone and use `nix develop`
 
 ```bash
-git clone https://github.com/XhuyZ/nixvim
+git clone https://github.com/SilverLuke/nixvim
 cd nixvim
 nix develop
 ```
@@ -25,7 +25,7 @@ nix develop
 ### ⚡ Method 2: For NixOS users `nix profile install`
 
 ```bash
-nix profile install github:XhuyZ/nixvim
+nix profile install github:SilverLuke/nixvim
 ```
 
 Once inside the `nix develop` environment, just run:
@@ -105,6 +105,6 @@ Here is a list of the main plugins included in this configuration along with the
 
 If you find this configuration useful or would like to contribute, feel free to open an issue or submit a PR on the main repository:
 
-👉 [github.com/XhuyZ/nixvim](https://github.com/XhuyZ/nixvim)
+👉 [github.com/SilverLuke/nixvim](https://github.com/SilverLuke/nixvim)
 
 ---
